@@ -28,10 +28,12 @@ def private_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+            Button.url("💥𝙳𝙴𝚅𝙻𝙾𝙿𝙴𝚁💘🙄", "https://t.me/Saif_Dictator")
         ],
         [
             InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
             InlineKeyboardButton(text=_["S_B_7"], url=config.UPSTREAM_REPO),
+            Button.url("💘𝙾𝚆𝙽𝙴𝚁💘", "https://t.me/SAIF_DICTATOR")
         ],
     ]
     return buttons
