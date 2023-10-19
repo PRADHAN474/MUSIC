@@ -1,9 +1,15 @@
 import math
-
 from pyrogram.types import InlineKeyboardButton
 
 from AnonXMusic.utils.formatters import time_to_seconds
 
+# Assuming that "_" is a dictionary containing the required strings
+_ = {
+    "P_B_1": "Play Button Text",
+    "P_B_2": "Another Button Text",
+    "P_B_3": "Third Button Text",
+    "CLOSE_BUTTON": "Close Button Text",
+}
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -25,7 +31,6 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
     ]
     return buttons
-
 
 def stream_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
@@ -70,7 +75,6 @@ def stream_markup_timer(_, chat_id, played, dur):
     ]
     return buttons
 
-
 def stream_markup(_, chat_id):
     buttons = [
         [
@@ -83,7 +87,6 @@ def stream_markup(_, chat_id):
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
-
 
 def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     buttons = [
@@ -106,7 +109,6 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     ]
     return buttons
 
-
 def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
         [
@@ -123,7 +125,6 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
         ],
     ]
     return buttons
-
 
 def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
     query = f"{query[:20]}"
@@ -154,3 +155,4 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
         ],
     ]
     return buttons
+    
